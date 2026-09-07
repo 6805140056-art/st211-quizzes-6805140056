@@ -1,13 +1,15 @@
-from solution import BankAccount
-def test_deposit_increases_balance():
-    account = BankAccount(balance=100)
-    new_balance = account.deposit(50)
-    assert new_balance == 150
+from solution import roman_to_number, validate_roman_rules
 
 
-def test_everything_at_once():
-    account = BankAccount(100)
-    account.deposit(50)
-    account.withdraw(30)
-    account.deposit(10)
-    assert account.balance == 130
+def test_roman_to_number():
+    assert roman_to_number("III") == 3
+    assert roman_to_number("VIII") == 8
+    assert roman_to_number("IX") == 9
+
+
+def test_invalid_repeated_symbols():
+    valid, message = validate_roman_rules("VV")
+    assert valid is False
+
+    valid, message = validate_roman_rules("IIII")
+    assert valid is False
