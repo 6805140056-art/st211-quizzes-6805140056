@@ -13,3 +13,12 @@ def test_invalid_repeated_symbols():
 
     valid, message = validate_roman_rules("IIII")
     assert valid is False
+def test_invalid_subtraction():
+    valid, message = validate_roman_rules("IL")
+    assert valid is False
+
+    valid, message = validate_roman_rules("IC")
+    assert valid is False
+
+    valid, message = validate_roman_rules("XD")
+    assert valid is False
