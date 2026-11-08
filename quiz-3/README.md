@@ -1,1 +1,1 @@
-Lab 2 exercises.
+Lab 2 - Python testing exercises.
