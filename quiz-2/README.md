@@ -1,1 +1,1 @@
-# Lab 1: Testing Fundamentals
+# Lab 1
